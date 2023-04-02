@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colher de prata stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel = "icon" href ="img/icon.png" type = "image/x-icon">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="img/header.png" alt="logo">
+    </header>
+
+    <div class="container">
+    
+        <div class="title">
+            <a href="https://open.spotify.com/artist/0QnOQjCqk1WORFuEPAK6nT" target="_blank">
+                <h2>imc-a! - colher de prata</h2>
+            </a>
+        </div>
+
+        <script>
+            const APIkey = "3a29466d699c8bd2e1b3ef9be7aa285e"
+            const Sharedsecret = "a77105960d3b224ec552fb12905f4d88"
+            const url = 'https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=3a29466d699c8bd2e1b3ef9be7aa285e&artist=Imp%C3%A9rio+Contra-Ataca!&track=Colher+de+Prata&format=json'  
+
+            
+            window.onload = Update = () =>{
+                
+                fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.track.playcount)
+                    getStats(data);
+                })
+                
+                function getStats (data) {
+                    /* vars */
+                    const infocontainer = document.getElementById('info-container');
+                    const iDisplay = document.getElementById('img-display');   
+                    const sDisplay = document.getElementById('scrobbles-display');   
+                    const lDisplay = document.getElementById('listeners-display');
+
+                    document.createElement('div');
+
+
+
+                    scrobblesTotal = data.track.playcount;
+                    ouvintesTotal = data.track.listeners;
+                        console.log(scrobblesTotal);
+                        const html = scrobblesTotal;
+                            
+                            $('#info-container').append('<span>LAST.FM:</span>' + '<br>' + '<br>');
+
+                        /* Scrobbles */
+                            $('#info-container').append('<span>Total de Scrobbles: </span>' + '<br>' );
+                            $('#info-container').append('<span>' + scrobblesTotal + '</span>' + '<br>' + '<br>');
+                        /* Ouvintes */
+                            $('#info-container').append('<span>Total de Ouvintes: </span>' + '<br>');
+                            $('#info-container').append('<span>' + ouvintesTotal + '</span>');
+                }
+
+
+            }
+
+
+
+            
+        </script>
+
+
+        <div class="info" id="info-container"></div>
+
+    </div> <!-- container -->
+    
+    <footer>
+        <span>acompanhe a império contra-ataca!</span>
+        <div class="socials-row">
+        
+            <p>|</p>
+
+            <a href="https://www.instagram.com/bandaimperioca/" target="_blank">
+                <img src="img/icons/instagram.svg" alt="instagram">
+            </a>
+
+            <p>|</p>
+
+            <a href="https://www.twitter.com/bandaimperioca/" target="_blank">
+                <img src="img/icons/twitter.svg" alt="twitter">
+            </a>
+            
+            <p>|</p>
+
+            <a href="https://www.imperiocontraataca.bandcamp.com" target="_blank">
+                <img src="img/icons/bandcamp.svg" alt="bandcamp">
+            </a>    
+        
+            <p>|</p>
+
+            <a href="https://www.last.fm/music/Imp%C3%A9rio+Contra-Ataca!" target="_blank">
+                <img src="img/icons/lastfm.svg" alt="lastfm">
+            </a>
+            
+            <p>|</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

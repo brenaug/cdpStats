@@ -1,0 +1,146 @@
+@font-face {
+    font-family: UnseenFont;
+    src: url(fonts/the\ unseen.ttf) format('truetype');
+    font-weight:500;
+    letter-spacing: 1rem;
+}
+
+:root{
+
+    --mGreen: #527d4d;
+    --mWhite: #fefefe;
+    --lGreen: #8fbc8f; 
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: UnseenFont;
+    color: var(--mWhite);
+    background-color: var(--mGreen);
+}
+
+header{
+    width: 100%;
+    height: 8rem;
+    border-bottom: 1px solid var(--lGreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    width: auto;
+    height: 100%;
+    cursor:pointer;
+    transition: 1s ease;
+
+}
+
+header img:hover{
+    transform: scale(0.8);
+}
+
+.title h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+.container{
+    display: block;
+    max-width: 30rem;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+    border: 1px solid var(--lGreen);
+    padding: 1rem;
+}
+
+@media screen and (max-width: 490px){
+    
+    .container{
+        max-width: 23rem;
+    }
+
+    header img{
+        width: 18rem;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 490px){
+    
+    .container{
+        max-width: 20rem;
+    }
+
+}
+
+.info span{
+    font-size: 1.5rem;
+}
+
+/* Footer */
+
+.socials-row{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.socials-row span{
+    padding: 10rem;
+    margin-top: 1rem; 
+}
+
+footer{
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0 auto;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    margin-bottom: 0.5rem;
+    bottom: 0;
+    border-top: 1px solid var(--lGreen);
+    flex-wrap: wrap;
+}
+
+footer span{
+    max-width: 30rem;
+}
+
+footer img{
+    width: 1.2rem;
+    height: auto;
+}
+
+footer p{
+    font-family: arial;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mWhite);
+    transition: 1s;
+}
+
+a:hover{
+    color: black;
+}
