@@ -28,7 +28,6 @@
             const Sharedsecret = "a77105960d3b224ec552fb12905f4d88"
             const url = 'https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=3a29466d699c8bd2e1b3ef9be7aa285e&artist=Imp%C3%A9rio+Contra-Ataca!&track=Colher+de+Prata&format=json'  
 
-            
             window.onload = Update = () =>{
                 
                 fetch(url)
@@ -45,23 +44,89 @@
                     const sDisplay = document.getElementById('scrobbles-display');   
                     const lDisplay = document.getElementById('listeners-display');
 
-                    document.createElement('div');
-
-
-
                     scrobblesTotal = data.track.playcount;
                     ouvintesTotal = data.track.listeners;
-                        console.log(scrobblesTotal);
-                        const html = scrobblesTotal;
-                            
-                            $('#info-container').append('<span>LAST.FM:</span>' + '<br>' + '<br>');
 
-                        /* Scrobbles */
-                            $('#info-container').append('<span>Total de Scrobbles: </span>' + '<br>' );
-                            $('#info-container').append('<span>' + scrobblesTotal + '</span>' + '<br>' + '<br>');
+                        const sLastFM = document.createElement('span');
+                        const sTitleScrobbles = document.createElement('span');
+                        const sScrobbles = document.createElement('span');
+                        const sTitleListeners = document.createElement('span');
+                        const sListeners = document.createElement('span');
+
+                        br = document.createElement("span");
+                        br.innerHTML = "<br> <br>";
+                        br1 = document.createElement("span");
+                        br1.innerHTML = "<br>";
+                        br2 = document.createElement("span");
+                        br2.innerHTML = "<br> <br>";
+                        br3 = document.createElement("span");
+                        br3.innerHTML = "<br>";
+
+                        sLastFM.textContent = 'LAST.FM:';
+
+                        sTitleScrobbles.textContent = 'Total de Scrobbles:';
+                        sScrobbles.textContent = scrobblesTotal;
+                        
+                        sTitleListeners.textContent = 'Total de Ouvintes:';
+                        sListeners.textContent = ouvintesTotal;
+                        
+                        infocontainer.append(sLastFM);
+                        infocontainer.appendChild(br); /* Line Break */
+                        
+                        infocontainer.append(sTitleScrobbles);
+                        infocontainer.appendChild(br1); /* Line Break */
+
+                        infocontainer.append(sScrobbles);
+                        infocontainer.appendChild(br2); /* Line Break */
+
+                        infocontainer.append(sTitleListeners);
+                        infocontainer.appendChild(br3); /* Line Break */
+
+                        infocontainer.append(sListeners);
+                        
+                     
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+                        /* VAI TOMAR NO SEU CU GITHUB PAGES DO CARALHO NAO DEIXA EU USAR JQUERY FUDERAO MEU CODIGO FDP */
+
+
+/*                         $('#info-container').append('<span>LAST.FM:</span>' + '<br>' + '<br>'); */
+                            /* Scrobbles */
+/*                             $('#info-container').append('<span>Total de Scrobbles: </span>' + '<br>' );
+                            $('#info-container').append('<span>' + scrobblesTotal + '</span>' + '<br>' + '<br>'); */
                         /* Ouvintes */
-                            $('#info-container').append('<span>Total de Ouvintes: </span>' + '<br>');
-                            $('#info-container').append('<span>' + ouvintesTotal + '</span>');
+/*                             $('#info-container').append('<span>Total de Ouvintes: </span>' + '<br>');
+                            $('#info-container').append('<span>' + ouvintesTotal + '</span>'); */
                 }
 
 
